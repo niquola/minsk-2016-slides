@@ -1,7 +1,6 @@
 (ns reagento.transport
   (:require-macros [cljs.core.async.macros :as m :refer [go alt!]])
   (:require [cljs-http.client :as http]
-            [reagent.core :as r]
             [cljs.core.async :refer [<!] :as async]))
 
 (defn xhr [req] (http/request req))
@@ -41,7 +40,6 @@
 
   (open)
   (send "Hello server")
-
   )
 
 
